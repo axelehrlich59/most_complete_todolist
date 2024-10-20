@@ -1,0 +1,48 @@
+.container-todo {
+  max-width: 500px;
+  word-break: break-word;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: .25rem;
+}
+
+li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  color: white;
+  border: 1px solid rgba(0,0,0,.125);
+  padding: .5rem 1rem;
+  position: relative;
+  background-color:#423a6f;
+  text-align: justify;
+}
+
+.trash-todo {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.archive-todo {
+  cursor: pointer;
+}
+
+.container-empty-todo {
+  text-align: center;
+  color: white;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  background-color: #423a6f;
+  border-radius: .25rem;
+}
+
+.title-empty-todo {
+  margin: 10px 0px 10px 0px;
+}

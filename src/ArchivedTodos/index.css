@@ -1,0 +1,7 @@
+.title-archive-todo {
+  color: white;
+}
+
+.archived-todo-content {
+  text-decoration: line-through;
+}
