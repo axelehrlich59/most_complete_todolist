@@ -4,26 +4,12 @@ import './index.css';
 import { FaTrash, FaArchive } from 'react-icons/fa'
 import AddTodoBar from '../AddTodoBar/index.js'
 import ArchivedTodos from '../ArchivedTodos/index.js';
+import useLocalStorage from '../Hooks/UseLocalStorage/index.js'
 
 const Todolist = () => {
 
   const [inputValue, setInputValue] = useState("");
-  const [todos, setTodos] = useState(
-    [
-      {
-        id: uuidv4(),
-        content: "Faire les courses",
-      },
-      {
-        id: uuidv4(),
-        content: "Faire la vaisselle",
-      },
-      {
-        id: uuidv4(),
-        content: "Donner a manger au chat",
-      },
-    ]
-  );
+  const [todos, setTodos] = useLocalStorage('tasks', []);
 
   const [archivedTodos, setArchivedTodos] = useState([]);
 
@@ -69,8 +55,8 @@ const Todolist = () => {
         <ul>
         {todos.length === 0 &&
           <div className="container-empty-todo">
-            <h4 className="title-empty-todo">Plus rien a faire ?</h4>
-            <p>Ajoute une nouvelle todo !</p>
+            <h4 className="title-empty-todo">Nothing to do today ?</h4>
+            <p>Try it, add some new !</p>
           </div>
         }
         {todos && todos.map(todo => (
