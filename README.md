@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Todo List App (en cours)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Une application de gestion de tâches (to-do list) qui permet aux utilisateurs de suivre et d'organiser leurs tâches de manière efficace. L'application inclut des fonctionnalités de base et avancées pour améliorer l'expérience utilisateur.
 
-In the project directory, you can run:
+## Fonctionnalités
 
-### `npm start`
+### 1. Fonctionnalités de base
+- **Ajouter des catégories** : Classez les tâches par catégories (travail, personnel, urgent, etc.).
+- **Échéances** : Définissez une date d’échéance pour chaque tâche et affichez des alertes pour les tâches à venir.
+- **Édition de tâches** : Modifiez les tâches existantes directement dans l’interface.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. Fonctionnalités avancées
+- **Gestion des sous-tâches** : Créez des sous-tâches pour mieux organiser des projets complexes.
+- **Priorités** : Marquez les tâches avec différents niveaux de priorité (élevée, moyenne, basse).
+- **Filtres et recherche** : Implémentez des filtres par statut, catégorie et priorité, ainsi qu'une barre de recherche pour retrouver facilement des tâches.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3. Interface utilisateur
+- **Thèmes personnalisables** : Offrez des options de thèmes sombres et clairs.
+- **Animations** : Ajoutez des animations lors de l'ajout, de la suppression ou de la modification des tâches.
 
-### `npm test`
+### 4. Notifications et rappels
+- **Notifications** : Intégrez des notifications pour rappeler les échéances des tâches via l'API de Notifications.
+- **Rappels par e-mail** : Intégrez un service d'envoi d'e-mails pour rappeler les tâches importantes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 5. Stockage et synchronisation
+- **Stockage local** : Utilisez `localStorage` pour enregistrer les tâches et les récupérer lors d'un rechargement de la page.
+- **Synchronisation avec une base de données** : Permettez aux utilisateurs de synchroniser leurs tâches sur plusieurs appareils via une API.
 
-### `npm run build`
+### 6. Partage et collaboration
+- **Partage de tâches** : Permettez aux utilisateurs de partager leurs listes de tâches avec d'autres utilisateurs (via un lien ou par e-mail).
+- **Collaboration en temps réel** : Intégrez WebSockets pour permettre à plusieurs utilisateurs de collaborer en temps réel.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 7. Statistiques et rapports
+- **Rapports d’activité** : Fournissez des statistiques sur les tâches (nombre de tâches complètes, en cours, etc.).
+- **Graphiques** : Utilisez une bibliothèque comme Chart.js pour visualiser l’activité des tâches au fil du temps.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 8. Tests et débogage
+- **Tests unitaires** : Écrivez des tests pour garantir que chaque composant fonctionne comme prévu.
+- **Débogage** : Utilisez des outils comme React Developer Tools pour analyser le comportement de l'application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 9. Documentation et déploiement
+- **Documentation** : Rédigez une documentation claire sur l'utilisation de l'application et comment la configurer.
+- **Déploiement** : Publiez l'application sur des plateformes comme Netlify ou Vercel pour permettre aux autres de l'essayer.
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clonez le dépôt :
+   ```bash
+   git clone <URL_DU_DEPOT>
+   cd <NOM_DU_DOSSIER>
