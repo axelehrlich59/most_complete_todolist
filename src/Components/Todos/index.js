@@ -4,7 +4,7 @@ import './index.css';
 import { FaTrash, FaArchive } from 'react-icons/fa'
 import AddTodoBar from '../AddTodoBar/index.js'
 import ArchivedTodos from '../ArchivedTodos/index.js';
-import useLocalStorage from '../Hooks/UseLocalStorage/index.js'
+import useLocalStorage from '../../Hooks/UseLocalStorage/index.js'
 
 const Todolist = () => {
 

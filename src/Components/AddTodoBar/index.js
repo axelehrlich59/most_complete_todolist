@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import './index.css';
 
 const AddTodoBar = ({
@@ -11,7 +10,12 @@ const AddTodoBar = ({
     <form className="form-topbar" onSubmit={addNewTodos}>
       <label className="label-title">Add new todo's</label>
       <div className="container-topbar">
-        <input type="text" onChange={onChangeValue} value={inputValue}/>
+        <input
+          type="text"
+          onChange={onChangeValue}
+          value={inputValue}
+          data-testid="form-input-text"
+        />
         <button className="button-topbar" type="submit">Add</button>
       </div>
     </form>
