@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import './index.css';
 import { FaTrash, FaArchive } from 'react-icons/fa'
@@ -36,6 +36,7 @@ const Todolist = () => {
         todos.splice(index, 1)
         setArchivedTodos([...archivedTodos, elem])
       }
+      return;
     })
     return prepareArchivedList
   }
