@@ -1,5 +1,8 @@
-#!/usr/bin/zsh
-source ~/.zshrc
-. "$(dirname -- "$0")/_/husky.sh"
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
 
 npm test
+if [ $? -ne 0 ]; then
+    echo "Les tests ont échoué. Commit annulé."
+    exit 1
+fi
