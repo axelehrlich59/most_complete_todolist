@@ -2,9 +2,13 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Todolist from './index.js';
+import AddTodoBar from '../AddTodoBar/index.js';
 
 test('it should display a content when we have no todos', () => {
-  render(<Todolist />);
+  render(
+  <Todolist
+    initialTodo={[]}
+  />);
 
   const titleEmptyTodo = screen.getByText(/Nothing to do today ?/i);
   const descriptionEmptyTodo = screen.getByText(/Try it, add some new !/i);
@@ -13,15 +17,18 @@ test('it should display a content when we have no todos', () => {
   expect(descriptionEmptyTodo).toBeInTheDocument();
 });
 
-test('it should not display empty todos message when todos are present and check if todos are set', () => {
-  render(<Todolist />);
+test('it should not display empty todos message when todos are present and check if todos are set', async () => {
+  render(
+  <Todolist>
+    <AddTodoBar />
+  </Todolist>);
 
-  const input = screen.getByRole('textbox');
+  const inputField = await screen.findByTestId('form-input-text')
   const addButton = screen.getByRole('button', { name: /Add/i });
 
-  fireEvent.change(input, { target: { value: 'First Todo' } });
+  fireEvent.change(inputField, { target: { value: 'First Todo' } });
   fireEvent.click(addButton);
-  fireEvent.change(input, { target: { value: 'Second Todo' } });
+  fireEvent.change(inputField, { target: { value: 'Second Todo' } });
   fireEvent.click(addButton);
 
   const titleEmptyTodo = screen.queryByText(/Nothing to do today ?/i);

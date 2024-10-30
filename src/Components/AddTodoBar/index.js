@@ -12,6 +12,7 @@ const AddTodoBar = ({
       <div className="container-topbar">
         <input
           type="text"
+          className="form-input"
           onChange={onChangeValue}
           value={inputValue}
           data-testid="form-input-text"

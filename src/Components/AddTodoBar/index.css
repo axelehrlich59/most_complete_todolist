@@ -17,11 +17,11 @@
   margin-right: 10px;
 }
 
-textarea:focus, input:focus{
+.form-input:focus{
   outline: none;
 }
 
-textarea, input {
+.form-input {
   height: 30px;
   width: 500px;
   border-radius: .25rem;

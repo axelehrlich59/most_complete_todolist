@@ -5,11 +5,15 @@ import { FaTrash, FaArchive } from 'react-icons/fa'
 import AddTodoBar from '../AddTodoBar/index.js'
 import ArchivedTodos from '../ArchivedTodos/index.js';
 import useLocalStorage from '../../Hooks/UseLocalStorage/index.js'
+import ArchiveAllTodos from '../ArchiveAllTodos/index.js';
 
-const Todolist = () => {
+const Todolist = ({
+  initialTodo,
+}) => {
 
   const [inputValue, setInputValue] = useState("");
-  const [todos, setTodos] = useLocalStorage('tasks', []);
+  const defaultTodos = initialTodo !== undefined ? initialTodo : [];
+  const [todos, setTodos] = useLocalStorage('tasks', defaultTodos);
 
   const [archivedTodos, setArchivedTodos] = useState([]);
 
@@ -53,6 +57,7 @@ const Todolist = () => {
   return (
     <>
       <div className="container-todo">
+        <ArchiveAllTodos />
         <ul>
         {todos.length === 0 &&
           <div className="container-empty-todo">
